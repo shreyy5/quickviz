@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickViz</title>
+    <style>
+        body {
+            background: #000000;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+        .container {
+            text-align: center;
+            z-index: 10;
+        }
+        .title {
+            font-size: 7em;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 5px #aaaaaa;
+        }
+        .input-box {
+            margin-top: 20px;
+        }
+        .input-field {
+            padding: 10px;
+            font-size: 1em;
+            border: 2px solid #555;
+            border-radius: 20px;
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .submit-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            background-color: #555;
+            color: #fff;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #777;
+        }
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">QuickViz</div>
+        <form action="/submit" method="post" class="input-box">
+            <input type="text" name="user_input" class="input-field" placeholder="Enter something...">
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <!-- Adding colorful circular figures -->
+    <div class="circle" style="width: 200px; height: 200px; background: rgba(255, 0, 0, 0.5); top: 10%; left: 15%;"></div>
+    <div class="circle" style="width: 150px; height: 150px; background: rgba(0, 255, 0, 0.5); top: 70%; left: 25%;"></div>
+    <div class="circle" style="width: 250px; height: 250px; background: rgba(0, 0, 255, 0.5); top: 40%; left: 75%;"></div>
+    <div class="circle" style="width: 100px; height: 100px; background: rgba(255, 255, 0, 0.5); top: 80%; left: 80%;"></div>
+    <div class="circle" style="width: 300px; height: 300px; background: rgba(0, 255, 255, 0.5); top: 20%; left: 60%;"></div>
+    <div class="circle" style="width: 180px; height: 180px; background: rgba(255, 0, 255, 0.8); top: 50%; left: 10%;"></div>
+    <div class="circle" style="width: 220px; height: 220px; background: rgba(255, 165, 0, 0.8); top: 30%; left: 45%;"></div>
+    <div class="circle" style="width: 170px; height: 170px; background: rgba(128, 0, 128, 0.8); top: 60%; left: 50%;"></div>
+    <div class="circle" style="width: 260px; height: 260px; background: rgba(75, 0, 130, 0.8); top: 10%; left: 70%;"></div>
+    <div class="circle" style="width: 200px; height: 200px; background: rgba(255, 20, 147, 0.8); top: 80%; left: 20%;"></div>
+</body>
+</html>
